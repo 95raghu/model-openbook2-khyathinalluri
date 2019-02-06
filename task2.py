@@ -12,6 +12,22 @@ def accessible(data,data1):
 						 a=a+1
 	return a
 
+def nonstandard(data,data1):
+	b=0
+	for line in data1:
+                if line[10]=="LOCAL STREET":
+                        #print(True)
+                        fdmid=line[23]
+                        #print(objectid)
+                        for line1 in data:
+                                if line1[9]==fdmid:
+                                        #print(True)
+                                        if line1[7]=="Non-Standard":
+                                                 b=b+1
+	
+	return b
+
+
 
 
 data1=[]
@@ -31,3 +47,4 @@ for line in fout2:
 
 
 print(accessible(data,data1))
+print(nonstandard(data,data1))
