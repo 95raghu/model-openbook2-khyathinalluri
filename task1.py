@@ -23,8 +23,14 @@ def hist_maintenance(data):
 			maintain_dictionary[datalist[12]]+=1
 	return maintain_dictionary
 
+def  unique_owners(data):
+		owners=[]
+		for datalist in data:
+			owners.append(datalist[11])
+		return owners
+
 
 d=opening_file("Street_Centrelines.csv")
 print(hist_maintenance(d))
-
+print(unique_owners(d))
 
