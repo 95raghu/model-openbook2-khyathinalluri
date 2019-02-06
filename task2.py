@@ -3,11 +3,11 @@ def accessible(data,data1):
 	for line in data1:
 		if line[10]=="ARTERIAL":
 			#print(True)
-			objectid=line[0]
+			fdmid=line[23]
 			#print(objectid)
 			for line1 in data:
-				if line1[2]==objectid:
-					print(True)
+				if line1[9]==fdmid:
+					#print(True)
 					if line1[7]=="Accessible":
 						 a=a+1
 	return a
